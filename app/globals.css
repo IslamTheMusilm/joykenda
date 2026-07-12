@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F7F1E4;
+  color: #242019;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Gold hairline rule used as a section/label divider, echoing a gallery placard */
+.gold-rule {
+  position: relative;
+}
+.gold-rule::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 56px;
+  margin-top: 18px;
+  background: linear-gradient(90deg, #AD8A4E, transparent);
+}
+.gold-rule.center::after {
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(90deg, transparent, #AD8A4E, transparent);
+}
+
+/* Picture-frame motif for artwork, echoing the gilt frames in the paintings */
+.gallery-frame {
+  padding: 10px;
+  background: linear-gradient(155deg, #C9A96A, #8A6A34 55%, #C9A96A);
+  border-radius: 2px;
+}
+.gallery-frame-inner {
+  padding: 6px;
+  background: #171310;
+}
+
+.eyebrow {
+  font-family: var(--font-jost);
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.72rem;
+  color: #8A6A34;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2rem;
+  background: #171310;
+  color: #F7F1E4;
+  font-family: var(--font-jost);
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  border: 1px solid #171310;
+}
+.btn-primary:hover {
+  background: #AD8A4E;
+  border-color: #AD8A4E;
+  color: #171310;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2rem;
+  background: transparent;
+  color: #171310;
+  font-family: var(--font-jost);
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 1px solid #242019;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.btn-outline:hover {
+  background: #171310;
+  color: #F7F1E4;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #AD8A4E;
+  outline-offset: 3px;
+}
