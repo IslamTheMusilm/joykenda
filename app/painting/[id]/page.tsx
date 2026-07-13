@@ -51,7 +51,7 @@ export default function PaintingPage({ params }: { params: { id: string } }) {
           <Reveal>
             <div className="gallery-frame shadow-frame">
               <div className="gallery-frame-inner">
-                <div className="relative aspect-[6/5]">
+                <div className="relative aspect-[6/5] bg-ink">
                   <Image
                     key={painting.id}
                     src={painting.image}
@@ -59,7 +59,7 @@ export default function PaintingPage({ params }: { params: { id: string } }) {
                     fill
                     priority
                     sizes="(max-width: 1024px) 90vw, 560px"
-                    className="object-cover animate-[fadein_0.8s_ease]"
+                    className="object-contain animate-[fadein_0.8s_ease]"
                   />
                 </div>
               </div>
