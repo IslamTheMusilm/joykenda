@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Phone, Mail, Clock, Instagram, Facebook, MapPin } from "lucide-react";
+import { Phone, Mail, Clock, Instagram, MapPin } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import ContactForm from "./ContactForm";
 
@@ -79,18 +79,13 @@ export default function ContactPage() {
                 <h2 className="font-display text-2xl text-ink mb-5">Follow Along</h2>
                 <div className="flex gap-4">
                   <a
-                    href="#"
+                    href="https://www.instagram.com/joykenda.arts/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label="Instagram"
                     className="w-11 h-11 rounded-full border border-beige flex items-center justify-center text-charcoal/70 hover:text-gold-dark hover:border-gold transition-colors"
                   >
                     <Instagram size={18} />
-                  </a>
-                  <a
-                    href="#"
-                    aria-label="Facebook"
-                    className="w-11 h-11 rounded-full border border-beige flex items-center justify-center text-charcoal/70 hover:text-gold-dark hover:border-gold transition-colors"
-                  >
-                    <Facebook size={18} />
                   </a>
                 </div>
               </div>
