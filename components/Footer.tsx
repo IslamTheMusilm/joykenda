@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Instagram, Facebook, Phone, Mail } from "lucide-react";
+import { Instagram, Phone, Mail } from "lucide-react";
 
 const links = [
   { href: "/", label: "Home" },
@@ -64,18 +64,13 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-3 pt-1">
               <a
-                href="#"
+                href="https://www.instagram.com/joykenda.arts/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="hover:text-gold-light transition-colors"
               >
                 <Instagram size={17} />
-              </a>
-              <a
-                href="#"
-                aria-label="Facebook"
-                className="hover:text-gold-light transition-colors"
-              >
-                <Facebook size={17} />
               </a>
             </li>
           </ul>
