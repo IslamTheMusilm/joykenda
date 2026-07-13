@@ -134,18 +134,6 @@ export const paintings: Painting[] = [
     availability: "Available",
     medium: "Oil on canvas",
   },
-  {
-    id: "woven-grace",
-    title: "Woven Grace",
-    price: 5000,
-    currency: "AED",
-    image: "/images/painting-woven-grace.jpg",
-    description:
-      "A luminous portrait of a woman in a richly patterned headscarf and dress, her serene realism set against a kaleidoscope of geometric mosaic detail. Classical portraiture and contemporary abstraction meet in quiet, dignified harmony. Framed in a deep violet frame with gold trim.",
-    dimensions: "120 cm × 70 cm",
-    availability: "Available",
-    medium: "Oil on canvas",
-  },
 ];
 
 export function getPaintingById(id: string) {
