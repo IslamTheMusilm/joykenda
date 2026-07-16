@@ -1,9 +1,20 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Palette, PartyPopper, Brush, Sparkles, ShieldCheck, Heart, UserCheck } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import PaintingCard from "@/components/PaintingCard";
+import PosterCarousel from "@/components/PosterCarousel";
 import { paintings } from "@/data/paintings";
+
+const heroPosters = [
+  {
+    src: "/images/poster-oil-workshop-en.jpg",
+    alt: "Oil Painting Workshop with Mona Al Jabali — Wednesday, July 29, 2026, Ajman Hall 2",
+  },
+  {
+    src: "/images/poster-oil-workshop-ar.jpg",
+    alt: "ورشة الرسم الزيتي مع الفنانة منى الجبالي - الأربعاء ٢٩ يوليو ٢٠٢٦",
+  },
+];
 
 export default function HomePage() {
   return (
@@ -33,26 +44,7 @@ export default function HomePage() {
           </Reveal>
 
           <Reveal delay={0.15}>
-            <div className="relative">
-              <div className="gallery-frame shadow-frame max-w-md mx-auto lg:ml-auto">
-                <div className="gallery-frame-inner">
-                  <div className="relative aspect-[6/5]">
-                    <Image
-                      src="/images/painting-horse-cubist.png"
-                      alt="Golden Stride — cubist-style painting of a horse by Joykenda Fine Arts"
-                      fill
-                      priority
-                      sizes="(max-width: 1024px) 90vw, 480px"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="absolute -bottom-6 -left-6 hidden sm:block bg-paper px-6 py-4 shadow-soft border border-beige">
-                <p className="font-display italic text-lg text-ink">"Golden Stride"</p>
-                <p className="text-xs text-charcoal/60 mt-0.5">Acrylic on canvas · 5,000 AED</p>
-              </div>
-            </div>
+            <PosterCarousel posters={heroPosters} />
           </Reveal>
         </div>
       </section>
@@ -76,7 +68,7 @@ export default function HomePage() {
           </Reveal>
 
           <div className="mt-14 grid sm:grid-cols-2 gap-x-10 gap-y-16 max-w-4xl">
-            {paintings.map((p, i) => (
+            {paintings.slice(0, 4).map((p, i) => (
               <Reveal key={p.id} delay={i * 0.1}>
                 <PaintingCard painting={p} />
               </Reveal>
