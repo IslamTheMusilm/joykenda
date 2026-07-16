@@ -44,7 +44,7 @@ export default function PosterCarousel({
       onMouseLeave={() => setPaused(false)}
     >
       <div className="gallery-frame shadow-frame">
-        <div className="gallery-frame-inner overflow-hidden relative aspect-[3/4]">
+        <div className="gallery-frame-inner overflow-hidden relative aspect-[3/4] bg-ink">
           <AnimatePresence initial={false} custom={direction} mode="popLayout">
             <motion.div
               key={index}
@@ -60,7 +60,7 @@ export default function PosterCarousel({
                 alt={posters[index].alt}
                 fill
                 sizes="(max-width: 768px) 90vw, 480px"
-                className="object-cover"
+                className="object-contain"
                 priority={index === 0}
               />
             </motion.div>
