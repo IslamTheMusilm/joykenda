@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Building2, Users, School, HeartHandshake, Landmark, Gem } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import PosterCarousel from "@/components/PosterCarousel";
 
 export const metadata: Metadata = {
   title: "Events",
@@ -16,6 +16,17 @@ const events = [
   { icon: HeartHandshake, title: "Community Art Events", desc: "Bringing communities together through shared creative experiences." },
   { icon: Landmark, title: "Gallery Exhibitions", desc: "Curated exhibitions showcasing original artwork and emerging talent." },
   { icon: Gem, title: "Wedding Art Displays", desc: "Bespoke artistic installations and live painting for weddings." },
+];
+
+const upcomingPosters = [
+  {
+    src: "/images/poster-oil-workshop-en.jpg",
+    alt: "Oil Painting Workshop with Mona Al Jabali — Wednesday, July 29, 2026, Ajman Hall 2",
+  },
+  {
+    src: "/images/poster-oil-workshop-ar.jpg",
+    alt: "ورشة الرسم الزيتي مع الفنانة منى الجبالي - الأربعاء ٢٩ يوليو ٢٠٢٦",
+  },
 ];
 
 export default function EventsPage() {
@@ -35,19 +46,11 @@ export default function EventsPage() {
             </p>
           </Reveal>
           <Reveal delay={0.15}>
-            <div className="gallery-frame shadow-frame max-w-md mx-auto">
-              <div className="gallery-frame-inner">
-                <div className="relative aspect-[4/3]">
-                  <Image
-                    src="/images/painting-horses-trio.png"
-                    alt="Artistic exhibition display by Joykenda Fine Arts Company"
-                    fill
-                    sizes="(max-width: 1024px) 90vw, 480px"
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
+            <p className="eyebrow text-center mb-4">Upcoming Workshop</p>
+            <PosterCarousel
+              posters={upcomingPosters}
+              registerHref="https://docs.google.com/forms/d/e/1FAIpQLSe_TlgGb5f-OoNQ2YJxASPM58h4Z1xLSyFeZnG60kzNITgxCA/viewform?usp=publish-editor"
+            />
           </Reveal>
         </div>
 
