@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 
 type Poster = {
   src: string;
@@ -12,10 +12,14 @@ type Poster = {
 
 export default function PosterCarousel({
   posters,
-  autoPlayMs = 5000,
+  autoPlayMs = 4000,
+  registerHref,
+  registerLabel = "Register Now",
 }: {
   posters: Poster[];
   autoPlayMs?: number;
+  registerHref?: string;
+  registerLabel?: string;
 }) {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
@@ -101,6 +105,19 @@ export default function PosterCarousel({
             ))}
           </div>
         </>
+      )}
+
+      {registerHref && (
+        <div className="mt-6 text-center">
+          <a
+            href={registerHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
+            {registerLabel} <ExternalLink size={15} />
+          </a>
+        </div>
       )}
     </div>
   );
