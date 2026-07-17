@@ -44,7 +44,10 @@ export default function HomePage() {
           </Reveal>
 
           <Reveal delay={0.15}>
-            <PosterCarousel posters={heroPosters} />
+            <PosterCarousel
+              posters={heroPosters}
+              registerHref="https://docs.google.com/forms/d/e/1FAIpQLSe_TlgGb5f-OoNQ2YJxASPM58h4Z1xLSyFeZnG60kzNITgxCA/viewform?usp=publish-editor"
+            />
           </Reveal>
         </div>
       </section>
