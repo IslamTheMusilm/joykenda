@@ -7,12 +7,12 @@ import { paintings } from "@/data/paintings";
 
 const heroPosters = [
   {
-    src: "/images/poster-oil-workshop-en.jpg",
-    alt: "Oil Painting Workshop with Mona Al Jabali — Wednesday, July 29, 2026, Ajman Hall 2",
+    src: "/images/poster-mosaic-workshop-1.jpg",
+    alt: "Joykenda Mosaic Workshop Proposal — cover page",
   },
   {
-    src: "/images/poster-oil-workshop-ar.jpg",
-    alt: "ورشة الرسم الزيتي مع الفنانة منى الجبالي - الأربعاء ٢٩ يوليو ٢٠٢٦",
+    src: "/images/poster-mosaic-workshop-2.jpg",
+    alt: "Joykenda Mosaic Workshop Proposal — overview page",
   },
 ];
 
