@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Pencil, Palette, Droplet, Layers, User } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
@@ -78,6 +79,36 @@ export default function CoursesPage() {
               </div>
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-24 grid lg:grid-cols-2 gap-14 items-center">
+          <Reveal>
+            <div className="gallery-frame shadow-frame">
+              <div className="gallery-frame-inner">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src="/images/courses-mona-students.jpg"
+                    alt="Mona Jebali teaching a group of art students outdoors at a university campus"
+                    fill
+                    sizes="(max-width: 1024px) 90vw, 560px"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <p className="eyebrow">Learning in Action</p>
+            <h2 className="font-display text-3xl sm:text-4xl text-ink mt-3">
+              Real Students, Real Guidance
+            </h2>
+            <p className="mt-5 text-charcoal/70 leading-relaxed text-lg">
+              With over 20 years of experience teaching fine arts at the
+              university level, Mona Jebali brings the same hands-on,
+              personal approach to every Joykenda course — whether it's a
+              small private workshop or a full class of students.
+            </p>
+          </Reveal>
         </div>
       </div>
     </section>
