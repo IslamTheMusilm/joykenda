@@ -14,6 +14,10 @@ const heroPosters = [
     src: "/images/poster-mosaic-workshop-2.jpg",
     alt: "Joykenda Mosaic Workshop Proposal — overview page",
   },
+  {
+    src: "/images/poster-glass-painting-workshop.png",
+    alt: "Glass Painting Workshop with Mona Jebali — Monday, August 3, 2026",
+  },
 ];
 
 export default function HomePage() {
