@@ -134,6 +134,54 @@ export const paintings: Painting[] = [
     availability: "Available",
     medium: "Oil on canvas",
   },
+  {
+    id: "woven-grace",
+    title: "Woven Grace",
+    price: 5000,
+    currency: "AED",
+    image: "/images/painting-woven-grace.jpg",
+    description:
+      "A luminous portrait of a woman in a richly patterned headscarf and dress, her serene realism set against a kaleidoscope of geometric mosaic detail. Classical portraiture and contemporary abstraction meet in quiet, dignified harmony. Framed in a deep violet frame with gold trim.",
+    dimensions: "120 cm × 70 cm",
+    availability: "Available",
+    medium: "Oil on canvas",
+  },
+  {
+    id: "lamplight-ensemble",
+    title: "Lamplight Ensemble",
+    price: 5000,
+    currency: "AED",
+    image: "/images/painting-lamplight-ensemble.jpg",
+    description:
+      "Five elegant figures in jewel-toned dresses and wide-brimmed hats gather beneath an ornate street lamp, rendered in faceted, cubist-inspired planes. Violins and cellos emerge from the shadows behind them, and drifting musical notes hint at a scene caught mid-melody. Vivid color cubes spill across the ground like scattered light.",
+    dimensions: "100 cm × 130 cm",
+    availability: "Available",
+    medium: "Oil on canvas",
+  },
+  {
+    id: "midnight-symphony",
+    title: "Midnight Symphony",
+    price: 5000,
+    currency: "AED",
+    image: "/images/painting-midnight-symphony.jpg",
+    description:
+      "Three musicians — cello, violin, and piano — perform beneath a row of glowing lampposts, their faceted dresses in magenta, sapphire, and emerald echoing the geometric style of the scene around them. A glassy floor mirrors the performance below, doubling the color and drama of this nighttime concert.",
+    dimensions: "90 cm × 110 cm",
+    availability: "Available",
+    medium: "Oil on canvas",
+  },
+  {
+    id: "heritage-in-color",
+    title: "Heritage in Color",
+    price: 5000,
+    currency: "AED",
+    image: "/images/painting-heritage-in-color.jpg",
+    description:
+      "A richly layered tribute to African heritage, where two figures in traditional dress are woven into a dense mosaic of geometric pattern, beadwork, pottery, and shields. Deep reds, greens, and golds build a textured, almost architectural composition celebrating craft, ceremony, and cultural memory.",
+    dimensions: "100 cm × 100 cm",
+    availability: "Available",
+    medium: "Oil on canvas",
+  },
 ];
 
 export function getPaintingById(id: string) {
