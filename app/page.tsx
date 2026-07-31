@@ -7,16 +7,12 @@ import { paintings } from "@/data/paintings";
 
 const heroPosters = [
   {
-    src: "/images/poster-mosaic-workshop-1.jpg",
-    alt: "Joykenda Mosaic Workshop Proposal — cover page",
-  },
-  {
-    src: "/images/poster-mosaic-workshop-2.jpg",
-    alt: "Joykenda Mosaic Workshop Proposal — overview page",
-  },
-  {
     src: "/images/poster-glass-painting-workshop.png",
     alt: "Glass Painting Workshop with Mona Jebali — Monday, August 3, 2026",
+  },
+  {
+    src: "/images/poster-cubist-oil-workshop.jpg",
+    alt: "The Art of the Point — Cubist Oil Painting Workshop with Mona Jebali, Monday, August 3, 2026, Al Quoz, Dubai",
   },
 ];
 
@@ -50,6 +46,7 @@ export default function HomePage() {
           <Reveal delay={0.15}>
             <PosterCarousel
               posters={heroPosters}
+              aspectRatio="0.5504"
               registerHref="https://docs.google.com/forms/d/e/1FAIpQLSe_TlgGb5f-OoNQ2YJxASPM58h4Z1xLSyFeZnG60kzNITgxCA/viewform?usp=publish-editor"
             />
           </Reveal>
