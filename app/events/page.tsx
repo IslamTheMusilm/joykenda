@@ -20,12 +20,12 @@ const events = [
 
 const upcomingPosters = [
   {
-    src: "/images/poster-oil-workshop-en.jpg",
-    alt: "Oil Painting Workshop with Mona Al Jabali — Wednesday, July 29, 2026, Ajman Hall 2",
+    src: "/images/poster-glass-painting-workshop.png",
+    alt: "Glass Painting Workshop with Mona Jebali — Monday, August 3, 2026",
   },
   {
-    src: "/images/poster-oil-workshop-ar.jpg",
-    alt: "ورشة الرسم الزيتي مع الفنانة منى الجبالي - الأربعاء ٢٩ يوليو ٢٠٢٦",
+    src: "/images/poster-cubist-oil-workshop.jpg",
+    alt: "The Art of the Point — Cubist Oil Painting Workshop with Mona Jebali, Monday, August 3, 2026, Al Quoz, Dubai",
   },
 ];
 
@@ -49,6 +49,7 @@ export default function EventsPage() {
             <p className="eyebrow text-center mb-4">Upcoming Workshop</p>
             <PosterCarousel
               posters={upcomingPosters}
+              aspectRatio="0.5504"
               registerHref="https://docs.google.com/forms/d/e/1FAIpQLSe_TlgGb5f-OoNQ2YJxASPM58h4Z1xLSyFeZnG60kzNITgxCA/viewform?usp=publish-editor"
             />
           </Reveal>
