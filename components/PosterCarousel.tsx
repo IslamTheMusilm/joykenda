@@ -15,11 +15,13 @@ export default function PosterCarousel({
   autoPlayMs = 4000,
   registerHref,
   registerLabel = "Register Now",
+  aspectRatio,
 }: {
   posters: Poster[];
   autoPlayMs?: number;
   registerHref?: string;
   registerLabel?: string;
+  aspectRatio?: string;
 }) {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
@@ -48,7 +50,10 @@ export default function PosterCarousel({
       onMouseLeave={() => setPaused(false)}
     >
       <div className="gallery-frame shadow-frame">
-        <div className="gallery-frame-inner overflow-hidden relative aspect-[3/4] bg-ink">
+        <div
+          className="gallery-frame-inner overflow-hidden relative aspect-[3/5] bg-ink"
+          style={aspectRatio ? { aspectRatio } : undefined}
+        >
           <AnimatePresence initial={false} custom={direction} mode="popLayout">
             <motion.div
               key={index}
