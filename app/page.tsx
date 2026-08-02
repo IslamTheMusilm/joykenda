@@ -7,8 +7,8 @@ import { paintings } from "@/data/paintings";
 
 const heroPosters = [
   {
-    src: "/images/poster-glass-painting-workshop.png",
-    alt: "Glass Painting Workshop with Mona Jebali — Monday, August 3, 2026",
+    src: "/images/poster-glass-painting-workshop-v2.jpg",
+    alt: "Glass Painting Workshop with Mona Jebali — Aug 10, 5-7 PM, Ajman",
   },
   {
     src: "/images/poster-cubist-oil-workshop.jpg",
@@ -46,7 +46,7 @@ export default function HomePage() {
           <Reveal delay={0.15}>
             <PosterCarousel
               posters={heroPosters}
-              aspectRatio="0.5504"
+              aspectRatio="0.6826"
               registerHref="https://docs.google.com/forms/d/e/1FAIpQLSe_TlgGb5f-OoNQ2YJxASPM58h4Z1xLSyFeZnG60kzNITgxCA/viewform?usp=publish-editor"
             />
           </Reveal>
