@@ -7,18 +7,10 @@ import { paintings } from "@/data/paintings";
 
 const heroPosters = [
   {
-    src: "/images/poster-glass-painting-workshop-v2.jpg",
-    alt: "Glass Painting Workshop with Mona Jebali — Aug 10, 5-7 PM, Ajman",
-  },
-  {
-    src: "/images/poster-cubist-oil-workshop.jpg",
-    alt: "The Art of the Point — Cubist Oil Painting Workshop with Mona Jebali, Monday, August 3, 2026, Al Quoz, Dubai",
-  },
-  {
     src: "/images/poster-silk-painting-workshop.jpg",
     alt: "Silk Painting Workshop with Mona Al Jebali — Sunday, Sep 13, 2026, 4-6 PM, Ajman",
   },
-];
+];a
 
 export default function HomePage() {
   return (
@@ -50,8 +42,8 @@ export default function HomePage() {
           <Reveal delay={0.15}>
             <PosterCarousel
               posters={heroPosters}
-              aspectRatio="0.7197"
-              registerHref="https://docs.google.com/forms/d/e/1FAIpQLSe_TlgGb5f-OoNQ2YJxASPM58h4Z1xLSyFeZnG60kzNITgxCA/viewform?usp=publish-editor"
+              aspectRatio="1080/1350"
+              registerHref="https://docs.google.com/forms/d/e/1FAIpQLScsR4s3Ns3kEG1E-qNyvJw3Sr1hsWL0hqNnYLuN0WVt-isgxg/viewform?usp=dialog"
             />
           </Reveal>
         </div>
