@@ -17,35 +17,61 @@ export default function HomePage() {
     <>
       {/* HERO */}
       <section className="relative bg-cream overflow-hidden">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10 pt-16 pb-20 lg:pt-24 lg:pb-28 grid lg:grid-cols-2 gap-14 items-center">
-          <Reveal>
-            <p className="eyebrow">Joykenda Fine Arts Company · Ajman, UAE</p>
-            <h1 className="mt-5 font-display font-medium text-5xl sm:text-6xl lg:text-7xl leading-[1.05] text-ink">
-              Bringing Art
-              <br />
-              <span className="italic text-gold-dark">to Life</span>
-            </h1>
-            <p className="mt-6 max-w-md text-charcoal/70 text-lg leading-relaxed">
-              Original paintings, creative events, and inspiring art courses
-              designed to spark imagination.
-            </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Link href="/gallery" className="btn-primary">
-                View Gallery <ArrowRight size={15} />
-              </Link>
-              <Link href="/contact" className="btn-outline">
-                Contact Us
-              </Link>
-            </div>
-          </Reveal>
+        <div className="mx-auto max-w-7xl px-6 lg:px-10 pt-16 pb-20 lg:pt-24 lg:pb-28 grid lg:grid-cols-12 gap-10 items-center">
+          <div className="lg:col-span-5">
+            <Reveal>
+              <p className="eyebrow">Joykenda Fine Arts Company · Ajman, UAE</p>
+              <h1 className="mt-5 font-display font-medium text-5xl sm:text-6xl lg:text-7xl leading-[1.05] text-ink">
+                Bringing Art
+                <br />
+                <span className="italic text-gold-dark">to Life</span>
+              </h1>
+              <p className="mt-6 max-w-md text-charcoal/70 text-lg leading-relaxed">
+                Original paintings, creative events, and inspiring art courses
+                designed to spark imagination.
+              </p>
+              <div className="mt-10 flex flex-wrap gap-4">
+                <Link href="/gallery" className="btn-primary">
+                  View Gallery <ArrowRight size={15} />
+                </Link>
+                <Link href="/contact" className="btn-outline">
+                  Contact Us
+                </Link>
+              </div>
+            </Reveal>
+          </div>
 
-          <Reveal delay={0.15}>
-            <PosterCarousel
-              posters={heroPosters}
-              aspectRatio="1080/1350"
-              registerHref="https://docs.google.com/forms/d/e/1FAIpQLScsR4s3Ns3kEG1E-qNyvJw3Sr1hsWL0hqNnYLuN0WVt-isgxg/viewform?usp=dialog"
-            />
-          </Reveal>
+          <div className="lg:col-span-7 flex flex-col sm:flex-row gap-8 items-start">
+            <div className="flex-1 w-full">
+              <Reveal delay={0.15}>
+                <PosterCarousel
+                  posters={heroPosters}
+                  aspectRatio="1080/1350"
+                  registerHref="https://docs.google.com/forms/d/e/1FAIpQLScsR4s3Ns3kEG1E-qNyvJw3Sr1hsWL0hqNnYLuN0WVt-isgxg/viewform?usp=dialog"
+                />
+              </Reveal>
+            </div>
+
+            <div className="flex-1 w-full">
+              <Reveal delay={0.25}>
+                <div className="gallery-frame shadow-frame max-w-md mx-auto">
+                  <div className="gallery-frame-inner overflow-hidden relative aspect-[9/16] bg-ink">
+                    <video
+                      className="absolute inset-0 w-full h-full object-cover"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                    >
+                      <source src="/videos/home-hero-video.webm" type="video/webm" />
+                      <source src="/videos/home-hero-video.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+          </div>
         </div>
       </section>
 
