@@ -10,7 +10,7 @@ const heroPosters = [
     src: "/images/poster-silk-painting-workshop.jpg",
     alt: "Silk Painting Workshop with Mona Al Jebali — Sunday, Sep 13, 2026, 4-6 PM, Ajman",
   },
-];a
+];
 
 export default function HomePage() {
   return (
