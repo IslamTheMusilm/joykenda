@@ -14,6 +14,10 @@ const heroPosters = [
     src: "/images/poster-cubist-oil-workshop.jpg",
     alt: "The Art of the Point — Cubist Oil Painting Workshop with Mona Jebali, Monday, August 3, 2026, Al Quoz, Dubai",
   },
+  {
+    src: "/images/poster-silk-painting-workshop.jpg",
+    alt: "Silk Painting Workshop with Mona Al Jebali — Sunday, Sep 13, 2026, 4-6 PM, Ajman",
+  },
 ];
 
 export default function HomePage() {
@@ -46,7 +50,7 @@ export default function HomePage() {
           <Reveal delay={0.15}>
             <PosterCarousel
               posters={heroPosters}
-              aspectRatio="0.6826"
+              aspectRatio="0.7197"
               registerHref="https://docs.google.com/forms/d/e/1FAIpQLSe_TlgGb5f-OoNQ2YJxASPM58h4Z1xLSyFeZnG60kzNITgxCA/viewform?usp=publish-editor"
             />
           </Reveal>
