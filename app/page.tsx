@@ -4,6 +4,7 @@ import Reveal from "@/components/Reveal";
 import PaintingCard from "@/components/PaintingCard";
 import PosterCarousel from "@/components/PosterCarousel";
 import WorkshopBanner from "@/components/WorkshopBanner";
+import HeroVideo from "@/components/HeroVideo";
 import { paintings } from "@/data/paintings";
 
 const heroPosters = [
@@ -55,21 +56,7 @@ export default function HomePage() {
 
             <div className="flex-1 w-full">
               <Reveal delay={0.25}>
-                <div className="gallery-frame shadow-frame max-w-md mx-auto">
-                  <div className="gallery-frame-inner overflow-hidden relative aspect-[9/16] bg-ink">
-                    <video
-                      className="absolute inset-0 w-full h-full object-cover"
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      preload="metadata"
-                    >
-                      <source src="/videos/home-hero-video.webm" type="video/webm" />
-                      <source src="/videos/home-hero-video.mp4" type="video/mp4" />
-                    </video>
-                  </div>
-                </div>
+                <HeroVideo />
               </Reveal>
             </div>
           </div>
