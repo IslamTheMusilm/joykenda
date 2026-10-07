@@ -1,51 +1,54 @@
-// Workshop registration banner for the joykenda.com home page.
-// Drop this file into the project's `components` folder (create it if missing),
-// then add <WorkshopBanner /> to the home page. See the steps sent with this file.
-// Uses inline styles only, so it works with or without Tailwind.
+import { ArrowRight } from "lucide-react";
+import Reveal from "@/components/Reveal";
+
+// Home-page section for the Fairmont Ajman x Joykenda workshops.
+// Uses the site's own colours and classes (bg-ink, text-cream, gold-light, eyebrow, font-display, btn-primary).
+// The button is a plain <a> (not next/link) because /register.html is a static file in /public.
+
+const workshops = [
+  { day: "Fri · 9 Oct", name: "Glass Painting" },
+  { day: "Sat · 10 Oct", name: "Silk Painting" },
+  { day: "Sun · 11 Oct", name: "Watercolour" },
+  { day: "Mon · 12 Oct", name: "Oil Painting" },
+];
 
 export default function WorkshopBanner() {
-  const gold = "#C9A45C";
   return (
-    <section
-      style={{
-        background: "#0B0A08",
-        color: "#F3EBDD",
-        padding: "48px 16px",
-        borderTop: `1px solid ${gold}`,
-        borderBottom: `1px solid ${gold}`,
-        textAlign: "center",
-      }}
-    >
-      <div style={{ maxWidth: 760, margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", gap: 14 }}>
-        <p style={{ margin: 0, fontSize: 12, letterSpacing: "0.28em", textTransform: "uppercase", color: gold }}>
-          Fairmont Ajman &amp; Joykenda Fine Arts Company
-        </p>
-        <h2 style={{ margin: 0, fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400, fontSize: "clamp(32px, 6vw, 52px)", lineHeight: 1.1 }}>
-          Fine Arts Workshops
-        </h2>
-        <p style={{ margin: 0, fontSize: 18, color: "#D9CDB6" }}>
-          Glass, Silk, Watercolour &amp; Oil Painting &middot; 9 &ndash; 12 October 2026 &middot; Daily 4:00 &ndash; 5:00 PM
-        </p>
-        <p style={{ margin: 0, fontSize: 15, color: "#B8AC97" }}>
-          Free participation &middot; Keep your artwork &middot; Prizes for the best work &middot; Led by artist Mona Jebali
-        </p>
-        <a
-          href="/register.html"
-          style={{
-            marginTop: 10,
-            display: "inline-block",
-            padding: "15px 34px",
-            background: "linear-gradient(180deg,#D9B56C,#B8924A)",
-            color: "#15100A",
-            textDecoration: "none",
-            fontWeight: 600,
-            fontSize: 14,
-            letterSpacing: "0.16em",
-            textTransform: "uppercase",
-          }}
-        >
-          Register now
-        </a>
+    <section className="bg-ink text-cream py-24">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <Reveal>
+          <p className="eyebrow !text-gold-light text-center">
+            Fairmont Ajman &amp; Joykenda Fine Arts Company
+          </p>
+          <h2 className="font-display text-4xl sm:text-5xl text-center mt-3">
+            Fine Arts <span className="italic text-gold-light">Workshops</span>
+          </h2>
+          <p className="mt-5 text-center text-cream/70 text-lg">
+            9 – 12 October 2026 · Daily, 4:00 – 5:00 PM · Fairmont Ajman
+          </p>
+        </Reveal>
+
+        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {workshops.map((w, i) => (
+            <Reveal key={w.name} delay={i * 0.1}>
+              <div className="text-center border border-cream/15 p-8 h-full transition-colors duration-500 hover:border-gold-light/60">
+                <p className="text-xs tracking-widest2 uppercase text-gold-light">{w.day}</p>
+                <p className="mt-3 font-display text-2xl">{w.name}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal delay={0.2}>
+          <p className="mt-12 text-center text-cream/60">
+            Free participation · Keep your artwork · Prizes for the best work · Led by artist Mona Jebali
+          </p>
+          <div className="mt-8 flex justify-center">
+            <a href="/register.html" className="btn-primary">
+              Register Now <ArrowRight size={15} />
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
