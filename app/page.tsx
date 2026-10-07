@@ -1,9 +1,9 @@
-import WorkshopBanner from "../components/WorkshopBanner";
 import Link from "next/link";
 import { ArrowRight, Palette, PartyPopper, Brush, Sparkles, ShieldCheck, Heart, UserCheck } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import PaintingCard from "@/components/PaintingCard";
 import PosterCarousel from "@/components/PosterCarousel";
+import WorkshopBanner from "@/components/WorkshopBanner";
 import { paintings } from "@/data/paintings";
 
 const heroPosters = [
@@ -75,6 +75,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* WORKSHOPS REGISTRATION */}
+      <WorkshopBanner />
 
       {/* FEATURED PAINTINGS */}
       <section className="bg-paper py-24">
