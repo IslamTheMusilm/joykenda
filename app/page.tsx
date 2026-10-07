@@ -1,3 +1,4 @@
+import WorkshopBanner from "../components/WorkshopBanner";
 import Link from "next/link";
 import { ArrowRight, Palette, PartyPopper, Brush, Sparkles, ShieldCheck, Heart, UserCheck } from "lucide-react";
 import Reveal from "@/components/Reveal";
