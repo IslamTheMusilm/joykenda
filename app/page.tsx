@@ -3,14 +3,16 @@ import { ArrowRight, Palette, PartyPopper, Brush, Sparkles, ShieldCheck, Heart, 
 import Reveal from "@/components/Reveal";
 import PaintingCard from "@/components/PaintingCard";
 import PosterCarousel from "@/components/PosterCarousel";
-import WorkshopBanner from "@/components/WorkshopBanner";
-import HeroVideo from "@/components/HeroVideo";
 import { paintings } from "@/data/paintings";
 
 const heroPosters = [
   {
-    src: "/images/poster-silk-painting-workshop.jpg",
-    alt: "Silk Painting Workshop with Mona Al Jebali — Sunday, Sep 13, 2026, 4-6 PM, Ajman",
+    src: "/images/poster-watercolour-workshop-en.jpg",
+    alt: "Watercolour Workshop with Mona Jebali — Friday 6 November, 4-6 PM, Fairmont Ajman Shop",
+  },
+  {
+    src: "/images/poster-watercolour-workshop-ru.jpg",
+    alt: "Акварель Мастер-класс с Мона Джебали — Пятница, 6 ноября, 16:00-18:00, Магазин Fairmont Ajman",
   },
 ];
 
@@ -48,7 +50,7 @@ export default function HomePage() {
               <Reveal delay={0.15}>
                 <PosterCarousel
                   posters={heroPosters}
-                  aspectRatio="1080/1350"
+                  aspectRatio="2250/4000"
                   registerHref="https://docs.google.com/forms/d/e/1FAIpQLScsR4s3Ns3kEG1E-qNyvJw3Sr1hsWL0hqNnYLuN0WVt-isgxg/viewform?usp=dialog"
                 />
               </Reveal>
@@ -56,15 +58,26 @@ export default function HomePage() {
 
             <div className="flex-1 w-full">
               <Reveal delay={0.25}>
-                <HeroVideo />
+                <div className="gallery-frame shadow-frame max-w-md mx-auto">
+                  <div className="gallery-frame-inner overflow-hidden relative aspect-[9/16] bg-ink">
+                    <video
+                      className="absolute inset-0 w-full h-full object-cover"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                    >
+                      <source src="/videos/home-hero-video.webm" type="video/webm" />
+                      <source src="/videos/home-hero-video.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
               </Reveal>
             </div>
           </div>
         </div>
       </section>
-
-      {/* WORKSHOPS REGISTRATION */}
-      <WorkshopBanner />
 
       {/* FEATURED PAINTINGS */}
       <section className="bg-paper py-24">
