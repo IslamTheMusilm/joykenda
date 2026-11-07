@@ -57,7 +57,7 @@ export default function HomePage() {
                 <div className="gallery-frame shadow-frame max-w-md mx-auto">
                   <div className="gallery-frame-inner overflow-hidden relative aspect-[9/16] bg-ink">
                     <video
-                      className="absolute inset-0 w-full h-full object-cover"
+                      className="className="object-cover object-top""
                       autoPlay
                       muted
                       loop
