@@ -54,7 +54,7 @@ export default function ArtistPage() {
                     fill
                     priority
                     sizes="(max-width: 1024px) 90vw, 480px"
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                 </div>
               </div>
